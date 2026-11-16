@@ -18,7 +18,31 @@ Click the button below, or add this repo URL to Morphe Manager by hand: https://
 ## Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.1](https://github.com/ak800i/morphe-patches/releases/tag/v1.0.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.1.0](https://github.com/ak800i/morphe-patches/releases/tag/v1.1.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;3 patches total
+<details open>
+<summary>📦 MiXplorer&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+**Package name:** `com.mixplorer`
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Fix scoped-storage file sharing](#fix-scoped-storage-file-sharing) | Hides unreadable _data filesystem paths from external apps for single-file and multi-file shares, preserving content URI access and same-app queries. |  |
+
+</details>
+
+<details open>
+<summary>📦 MiXplorer Beta&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
+<br>
+
+**Package name:** `com.mixplorer.beta`
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Fix scoped-storage file sharing](#fix-scoped-storage-file-sharing) | Hides unreadable _data filesystem paths from external apps for single-file and multi-file shares, preserving content URI access and same-app queries. |  |
+
+</details>
+
 <details open>
 <summary>📦 Waze&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>

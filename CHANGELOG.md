@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/ak800i/morphe-patches/compare/v1.0.1...v1.1.0) (2026-11-16)
+
+### ✨ New Features
+
+* Add MiXplorer scoped-storage sharing fix ([66c0eb6](https://github.com/ak800i/morphe-patches/commit/66c0eb664124a4a655de92131f0506480905f4e9))
+
 ## [1.0.1](https://github.com/ak800i/morphe-patches/compare/v1.0.0...v1.0.1) (2026-11-16)
 
 ## 1.0.0 (2026-11-16)
