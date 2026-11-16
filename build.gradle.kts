@@ -1,1 +1,1 @@
-// Root build configuration for waze-morphe-patches
+// Root build configuration for morphe-patches

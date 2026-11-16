@@ -4,16 +4,16 @@ Morphe patches for Waze. The first patch lets you import and export custom voice
 
 ## How to use these patches
 
-Click the button below, or add this repo URL to Morphe Manager by hand: https://github.com/ak800i/waze-morphe-patches
+Click the button below, or add this repo URL to Morphe Manager by hand: https://github.com/ak800i/morphe-patches
 
-<a href="https://morphe.software/add-source?github=ak800i/waze-morphe-patches">
+<a href="https://morphe.software/add-source?github=ak800i/morphe-patches">
   <img src=".github/assets/add-to-morphe.svg" alt="Add to Morphe" height="48">
 </a>
 
 ## Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0](https://github.com/ak800i/waze-morphe-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
+> **[v1.0.0](https://github.com/ak800i/morphe-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;1 patches total
 <details open>
 <summary>📦 Waze&nbsp;&nbsp;•&nbsp;&nbsp;1 patch</summary>
 <br>

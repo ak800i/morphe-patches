@@ -4,10 +4,10 @@ patches {
     about {
         name = "ak800i Waze patches"
         description = "Waze: import and export custom voices as zipped MP3 voice packs."
-        source = "git@github.com:ak800i/waze-morphe-patches.git"
+        source = "git@github.com:ak800i/morphe-patches.git"
         author = "ak800i"
         contact = "https://github.com/ak800i"
-        website = "https://github.com/ak800i/waze-morphe-patches"
+        website = "https://github.com/ak800i/morphe-patches"
         license = "GPLv3"
     }
 }

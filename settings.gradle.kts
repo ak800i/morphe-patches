@@ -1,4 +1,4 @@
-rootProject.name = "waze-morphe-patches"
+rootProject.name = "morphe-patches"
 
 pluginManagement {
     repositories {
