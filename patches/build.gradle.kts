@@ -2,8 +2,8 @@ group = "app.ak800i"
 
 patches {
     about {
-        name = "ak800i Waze patches"
-        description = "Waze: import and export custom voices as zipped MP3 voice packs."
+        name = "ak800i patches"
+        description = "Patches for various apps. Waze: import and export custom voices as zipped MP3 voice packs."
         source = "git@github.com:ak800i/morphe-patches.git"
         author = "ak800i"
         contact = "https://github.com/ak800i"

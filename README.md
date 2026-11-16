@@ -1,6 +1,10 @@
-# ak800i Waze patches
+# ak800i patches
 
-Morphe patches for Waze. The first patch lets you import and export custom voices as zip files of MP3 prompts.
+Morphe patches for various apps. Each app has its own section below.
+
+| App | Patches |
+| --- | --- |
+| [Waze](#waze) | [Voice pack import and export](#voice-pack-import-and-export) |
 
 ## How to use these patches
 
@@ -33,7 +37,13 @@ Click the button below, or add this repo URL to Morphe Manager by hand: https://
 
 <!-- PATCHES_END -->
 
-## Voice pack import and export
+## Waze
+
+Patches for Waze (`com.waze`). You can apply them together with
+[bearinmind patches](https://github.com/bearinmindcat/morphe-patches) to the same Waze. Tested with
+bearinmind patches 2.10.0 and all of its Waze patches that are on by default.
+
+### Voice pack import and export
 
 Waze lets you record your own voice for navigation prompts (Settings > Voice & sound > Voice >
 Record a new voice). This patch adds two buttons at the top of that recording screen:
@@ -49,7 +59,7 @@ Record a new voice). This patch adds two buttons at the top of that recording sc
 Waze still saves, uploads and shares the voice itself. The patch only fills or reads the
 prompts on the recording screen.
 
-### Zip structure
+#### Zip structure
 
 ```
 My voice.zip
@@ -75,7 +85,7 @@ recordings are AAC audio in files that end in `.mp3`, so exported packs contain 
 unchanged. Keep each prompt short, because Waze plays it in the middle of navigation. The
 recording screen shows the maximum length for each prompt.
 
-### Prompt ids
+#### Prompt ids
 
 The patch reads the list of prompt ids from Waze when it runs, so it always matches the
 installed Waze version. The safest way to get the exact file names is to record one prompt,
@@ -97,7 +107,7 @@ Waze shows only the metric or the imperial distances, depending on your units se
 later Waze version changes the list, export a voice to see the new names, or run
 `adb logcat -s WazeVoicePack` while you tap Import or Export; the patch logs the full list.
 
-### voicepack.json
+#### voicepack.json
 
 The metadata file is optional. Export always writes it.
 
