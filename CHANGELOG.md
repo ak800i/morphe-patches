@@ -1,3 +1,9 @@
+## [1.1.1](https://github.com/ak800i/morphe-patches/compare/v1.1.0...v1.1.1) (2026-11-16)
+
+### 🐛 Bug Fixes
+
+* Import Waze's own .tar.gz voice packs and skip empty prompts ([359e477](https://github.com/ak800i/morphe-patches/commit/359e477ec899dd1d4a6ddece2648a1f84dd87d04))
+
 ## [1.1.0](https://github.com/ak800i/morphe-patches/compare/v1.0.1...v1.1.0) (2026-11-16)
 
 ### ✨ New Features
