@@ -219,13 +219,18 @@ public final class VoicePack {
                 result = VoicePackFormat.read(in, voices.promptIds, staging);
             }
             if (result.imported.isEmpty()) {
-                toast(app, "No Waze prompts found. Prompt files must be named like TurnLeft.mp3.");
+                long empty = result.skipped.stream().filter(s -> s.endsWith("(empty)")).count();
+                toast(app, empty > 0
+                        ? "No Waze prompts found; " + empty + " prompt files in the pack are empty."
+                        : "No Waze prompts found. Prompt files must be named like TurnLeft.mp3.");
                 return;
             }
             String name = result.name != null ? result.name : VoicePackFormat.trimName(displayName(app, uri));
             StringBuilder message = new StringBuilder("Imported ")
                     .append(result.imported.size()).append(" prompts");
             if (!result.skipped.isEmpty()) message.append(", skipped ").append(result.skipped.size()).append(" files");
+            long empty = result.skipped.stream().filter(s -> s.endsWith("(empty)")).count();
+            if (empty > 0) message.append(" (").append(empty).append(" empty)");
             if (result.newerFormat) message.append(". The pack uses a newer format; some details may be ignored");
             message.append(". Tap Done to save the voice.");
 
@@ -304,7 +309,7 @@ public final class VoicePack {
                 uri, new String[]{OpenableColumns.DISPLAY_NAME}, null, null, null)) {
             if (cursor != null && cursor.moveToFirst()) {
                 String name = cursor.getString(0);
-                if (name != null && name.toLowerCase(Locale.ROOT).endsWith(".zip")) name = name.substring(0, name.length() - 4);
+                if (name != null) name = name.replaceAll("(?i)\\.(zip|tar\\.gz|tgz|tar)$", "");
                 return name;
             }
         } catch (Exception e) {
@@ -349,7 +354,8 @@ public final class VoicePack {
                     .addCategory(Intent.CATEGORY_OPENABLE)
                     .setType("*/*")
                     .putExtra(Intent.EXTRA_MIME_TYPES, new String[]{
-                            "application/zip", "application/x-zip-compressed", "application/octet-stream"});
+                            "application/zip", "application/x-zip-compressed", "application/gzip", "application/x-gzip",
+                            "application/x-tar", "application/x-compressed-tar", "application/octet-stream"});
             start(intent, REQUEST_IMPORT);
         }
 

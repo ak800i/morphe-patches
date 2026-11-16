@@ -141,7 +141,7 @@ bearinmind patches 2.10.0 and all of its Waze patches that are on by default.
 Waze lets you record your own voice for navigation prompts (Settings > Voice & sound > Voice >
 Record a new voice). This patch adds two buttons at the top of that recording screen:
 
-- **Import pack** opens a zip file and puts its prompts on the screen. This replaces any
+- **Import pack** opens a voice pack (`.zip`, or a `.tar.gz` as Waze itself shares) and puts its prompts on the screen. This replaces any
   prompts that are already on the screen. Then tap **Done** and save the voice as usual. The
   name field is filled in from the pack. If you import while editing an existing voice, the
   voice keeps its current name.
@@ -165,13 +165,18 @@ My voice.zip
 
 Import is lenient:
 
-- Prompt files can be at the top of the zip or in any folder inside it.
+- Prompt files can be at the top of the archive or in any folder inside it.
 - Prompt ids are matched without regard to case, so `turnleft.mp3` works.
-- Files whose names are not Waze prompt ids, and files that are not `.mp3`, are skipped.
-  The patch shows how many files it skipped.
+- Files whose names are not Waze prompt ids, files that are not `.mp3`, and empty files are
+  skipped. The patch shows how many files it skipped.
 - You don't need every prompt. Waze only requires at least one recording. Prompts without
   a recording use the fallback voice that you choose in Waze.
 - Each prompt can be at most 8 MB.
+
+Import also reads the `.tar.gz` voice packs that Waze uses when it shares a custom voice, for
+example `996e7c80-7922-4b5e-93b3-39beff864f3c.tar.gz`. They hold the same `<promptId>.mp3` files,
+plus Waze sound effects that are skipped, and a `metadata.json` whose `set_name` fills in the
+voice name. Plain `.tar` files work too. You don't need to repack them as a zip.
 
 The audio can be any format that Android's media player can play: MP3, or AAC/M4A. Waze's own
 recordings are AAC audio in files that end in `.mp3`, so exported packs contain those files
